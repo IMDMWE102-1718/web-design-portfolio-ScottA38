@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #ccc;
+}
+
+article {
+  width: 210mm;
+  height: 297mm;
+  margin: 20px auto;
+  position: relative;
+}
+
+address {
+  position: absolute;
+  bottom: 8mm;
+  right: 20mm;
+}
+
+h1 {
+  position: absolute;
+  top: 12mm;
+  left: 20mm;
+  width: 128px;
+  height: 128px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 44px 0;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+/* Your CSS below here */
+
+body {
+  /*apply single image declaration for background image proir to multiple-image declaration.
+  This is so that there will still be similar styling in earlier browsers */
+  background-image: url("top-image.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  /*image name has to be enclosed in url() function, even when referencing inside of local directory */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0,0,0,0)), linear-gradient(rgba(0, 0, 0, 0), rgba(0,0,0,0.35)), url("top-image.png"), url("bottom-image.png");
+  /*background size ensures that image is scaled to 100% of the parent container */
+  background-size: 100% 20%, 100% 20%, 100%, 100%;
+  background-position: top, bottom, top, bottom;
+  /* if this was not specified the image would repeat in both x and y directions*/
+  background-repeat: no-repeat, no-repeat, no-repeat;
+}
+
+article{
+  box-sizing: content-box;
+  /*page main content background colour is set */
+  background-color: white;
+  /*set the width colour and style to the top and bottom */
+  border-top: 1mm solid rgb(130, 130, 255);
+  border-bottom: 1mm solid rgb(100, 0, 30);
+}
+
+h1 {
+  /*adding background logo image to heading */
+  background-image: url("mc_logo.png");
+
+  /*adding a css 'drop-shadow' effect, with syntax: drop-shadow(<offset-x> <offset-y> <spread (radial)> <colour>)*/
+  /*filter: drop-shadow(-8px 10px 5px rgba(0,0,0,0.5)); */
+  box-shadow: -8px 10px 5px rgba(0,0, 0, 0.5);
+}
