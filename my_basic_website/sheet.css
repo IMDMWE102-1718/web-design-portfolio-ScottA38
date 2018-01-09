@@ -55,6 +55,20 @@ div.content {
   box-sizing: border-box;
 }
 
+div.content-inner {
+  text-align: center;
+  min-width: 650px;
+  position: absolute;
+  background-color: white;
+  margin: 0px 20px 20px 20px;
+  top: 220px;
+  right: 20px;
+  left: 20px;
+  bottom: 50px;
+  padding: 20px 50px 20px 50px;
+  overflow: auto;
+}
+
 div.headerbar {
   text-align: center;
   width: 100%;
@@ -92,21 +106,7 @@ ul {
    padding: 5px;
  }
 
-div.content-inner {
-  text-align: center;
-  height: auto;
-  width: auto;
-  min-width: 650px;
-  position: absolute;
-  background-color: white;
-  margin: 0px 20px 20px 20px;
-  top: 220px;
-  right: 20px;
-  left: 20px;
-  bottom: 50px;
-  padding: 20px 50px 20px 50px;
-  overflow: auto;
-}
+
 
 div.placeholder {
   position: static;
